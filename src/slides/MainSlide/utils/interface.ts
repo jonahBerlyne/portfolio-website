@@ -1,5 +1,10 @@
+export interface AboutMeTitleInt {
+ scrollPercent: number;
+}
+
 export interface ShowTextInt {
- text: string;
  fontFamily: string;
- timeDelay: number;
+ reveal?: boolean;
+ text?: string;
+ timeDelay?: number;
 }

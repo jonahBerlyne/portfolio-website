@@ -15,6 +15,9 @@ position: absolute;
 color: #EEE;
 top: 5%;
 left: -15%;
+@media (max-width: 1023px) {
+  display: none;
+}
 @media ${device.laptop} {
   font-size: 180px;
 }
@@ -30,9 +33,22 @@ const AboutMeDescription = styled.div`
  align-items: center;
  font-family: 'Open Sans', sans-serif;
  font-weight: 300;
- text-align: left;
- margin-left: 30%;
- margin-right: 5%;
+ @media ${device.mobile_s} {
+   font-size: 20px;
+   text-align: center;
+ }
+ @media ${device.mobile_m} {
+   font-size: 23px;
+ }
+ @media ${device.mobile_l} {
+   font-size: 24px;
+ }
+ @media ${device.tablet} {
+   font-size: 40px;
+   text-align: left;
+   margin-left: 30%;
+   margin-right: 5%;
+ }
  @media ${device.laptop} {
    transform: translateY(90%);
    font-size: 30px;

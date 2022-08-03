@@ -14,7 +14,7 @@ font-family: 'Roboto', sans-serif;
 position: absolute;
 color: #EEE;
 top: 5%;
-left: -15%;
+left: -225%;
 @media (max-width: 1023px) {
   display: none;
 }

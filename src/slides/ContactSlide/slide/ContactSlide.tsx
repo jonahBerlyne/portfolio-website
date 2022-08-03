@@ -57,12 +57,12 @@ export default function ContactSlide(): JSX.Element {
    <div className="icons-container">
     <Icon 
      alt="Github"
-     imgUrl='/images/github_logo.png' 
+     imgUrl='/images/logos/github_logo.png' 
      socialLink='https://github.com/jonahBerlyne'
     />
     <Icon 
      alt="LinkedIn"
-     imgUrl='/images/linkedin_logo.png' 
+     imgUrl='/images/logos/linkedin_logo.png' 
      socialLink='https://www.linkedin.com/in/jonah-b-b7015a100/'
     />
    </div>

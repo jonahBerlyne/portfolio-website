@@ -1,0 +1,44 @@
+.text-container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ display: flex;
+ flex-flow: column nowrap;
+ height: 100vh;
+ width: 50%;
+}
+
+.project-details-container {
+ display: flex;
+ flex-flow: column nowrap;
+ align-items: center;
+ padding-top: 5%;
+ height: 100%;
+}
+
+.project-details {
+ display: flex;
+ flex-flow: column nowrap;
+ width: 100%;
+ padding: 5%;
+ padding-left: 10%;
+}
+
+.image-container {
+ margin-left: 50%;
+ width: 50%;
+ height: 900vh;
+ display: flex;
+ flex-flow: column nowrap;
+}
+
+.image-box {
+ margin-top: 40vh;
+ height: 100vh;
+ position: relative;
+}
+
+.work-slide-container {
+ display: flex;
+ flex-flow: row nowrap;
+}

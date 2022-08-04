@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ImagesInt } from '../../utils/interface';
 import styled from 'styled-components';
 
-const HomeImg = styled.img.attrs<ImagesInt>(({ scrollPercent }) => ({
+const ImgOne = styled.img.attrs<ImagesInt>(({ scrollPercent }) => ({
   style: {
     transform: `translate(0px,-${(scrollPercent) * 15}%)`
   }
@@ -15,7 +15,7 @@ left:0vw;
 height: 80vh; 
 `;
 
-const CheckoutImg = styled.img.attrs<ImagesInt>(({ scrollPercent }) => ({
+const ImgTwo = styled.img.attrs<ImagesInt>(({ scrollPercent }) => ({
   style: { 
    transform: `translate(0px,-${(scrollPercent) * 8}%) scale(0.9)`
   }
@@ -29,9 +29,13 @@ height: 80vh;
 filter: blur(0.6px);
 `;
 
-export default function SeinfeldStoreImages(props: ImagesInt): JSX.Element {
+export default function Images(props: ImagesInt): JSX.Element {
  const {
   boxHeight,
+  imgAlt1,
+  imgAlt2,
+  imgSrc1,
+  imgSrc2,
   index,
   scrollPercent,
   scrollHeight,
@@ -67,8 +71,8 @@ export default function SeinfeldStoreImages(props: ImagesInt): JSX.Element {
 
  return (
   <>
-   <HomeImg src='/images/projects/SeinfeldStore/home.png' alt='Seinfeld Store Homepage' scrollPercent={_scrollPercent} />
-   <CheckoutImg src='/images/projects/SeinfeldStore/checkout.png' alt='Seinfeld Store Checkout' scrollPercent={_scrollPercent} />
+   <ImgOne src={imgSrc1} alt={imgAlt1} scrollPercent={_scrollPercent} />
+   <ImgTwo src={imgSrc2} alt={imgAlt2} scrollPercent={_scrollPercent} />
   </>
  );
 }

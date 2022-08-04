@@ -24,6 +24,34 @@ export default function WorkSlide(): JSX.Element {
    roles: ['I', 'D', 'K']
   },
   {
+   number: '02',
+   projectName: 'QR Code App',
+   projectDesc: 'Description goes here',
+   projectType: 'Placeholder',
+   roles: ['I', 'D', 'K']
+  },
+  {
+   number: '03',
+   projectName: 'Timezone Tracking App',
+   projectDesc: 'Description goes here',
+   projectType: 'Placeholder',
+   roles: ['I', 'D', 'K']
+  },
+  {
+   number: '04',
+   projectName: 'Twitter Clone App',
+   projectDesc: 'Description goes here',
+   projectType: 'Placeholder',
+   roles: ['I', 'D', 'K']
+  },
+  {
+   number: '05',
+   projectName: 'Gmail Clone App',
+   projectDesc: 'Description goes here',
+   projectType: 'Placeholder',
+   roles: ['I', 'D', 'K']
+  },
+  {
    number: '',
    projectName: '',
    projectDesc: '',

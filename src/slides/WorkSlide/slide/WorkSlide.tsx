@@ -63,7 +63,6 @@ export default function WorkSlide(): JSX.Element {
  const pageSplitTimes = 1.4;
  
  const changeTextContentBasedOnScroll = (): JSX.Element => {
-  const refresh = true;
   return (
    <Text
     number={workDetails[slideNumber].number}
@@ -71,7 +70,6 @@ export default function WorkSlide(): JSX.Element {
     projectDesc={workDetails[slideNumber].projectDesc}
     projectType={workDetails[slideNumber].projectType}
     roles={workDetails[slideNumber].roles}
-    refreshToggle={refresh}
    />
   );
  }

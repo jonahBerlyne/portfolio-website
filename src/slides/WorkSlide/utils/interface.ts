@@ -1,8 +1,3 @@
-export interface BlockTextInt {
- inline: boolean;
- refreshToggle: boolean;
-}
-
 export interface ImageInt {
  pageSplitTimes: number;
 }
@@ -25,5 +20,4 @@ export interface TextInt {
  projectDesc: string;
  projectType: string;
  roles: any[];
- refreshToggle: boolean;
 }

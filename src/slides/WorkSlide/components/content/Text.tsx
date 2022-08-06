@@ -3,6 +3,7 @@ import "../../../styles/WorkSlide.css";
 import { TextInt } from '../../utils/interface';
 import styled from 'styled-components';
 import device from '../../../../utils/device';
+import { OpenInNew } from '@mui/icons-material';
 
 const ProjectName = styled.div`
   font-family: 'AvenirHeavy';
@@ -18,30 +19,14 @@ const ProjectName = styled.div`
 `;
 
 const ProjectDesc = styled.div`
-  padding-top:2%;
+  padding-top: 2%;
   font-family: 'AvenirBook';
+  width: 40vw;
   @media ${device.laptop} {
     font-size: 25px;
   }
   @media ${device.laptop_l} {
     font-size: 30px;
-  }
-  @media ${device.desktop} {
-    font-size: 50px;
-  }
-`;
-
-const MyRole = styled.div`
-  padding-top:5%;
-  font-family: 'AvenirMedium';
-  @media ${device.laptop} {
-    font-size: 25px;
-  }
-  @media ${device.laptop_l} {
-    font-size: 30px;
-  }
-  @media ${device.desktop} {
-    font-size: 50px;
   }
 `;
 
@@ -75,11 +60,11 @@ const ProjectType = styled.div`
 
 export default function Text(props: TextInt): JSX.Element {
  const {
+  appLink,
   number,
   projectName,
   projectDesc,
-  projectType,
-  roles
+  repoLink
  } = props;
 
  return (
@@ -96,20 +81,16 @@ export default function Text(props: TextInt): JSX.Element {
        {projectName}
      </ProjectName>
 
-     <MyRole>
-       {roles.map((role, index, arr) => 
-        (index === arr.length - 1) ? (
-         <span key={role}>
-          {role}
-         </span>
-        ) : (
-         <span key={role}>
-          {role}
-          &nbsp; • &nbsp;
-         </span>
-        )
-       )}
-     </MyRole>
+     {appLink !== '' && repoLink !== '' && 
+      <div className='project-links-container'>
+       <a href={appLink} target="_blank" rel="noreferrer">
+         <OpenInNew />
+       </a>
+       <a href={repoLink} target="_blank" rel="noreferrer">
+         <img className='repo-link' src="/images/logos/github_logo.png" alt={`Repo link for ${projectName}`} />
+       </a>
+      </div>
+     }
 
      <ProjectDesc>
        {projectDesc}
@@ -117,10 +98,6 @@ export default function Text(props: TextInt): JSX.Element {
 
     </div>
    </div>
-
-   <ProjectType>
-     {projectType}
-   </ProjectType>
 
   </div>
  );

@@ -15,9 +15,9 @@ export interface ImagesInt {
 }
 
 export interface TextInt {
+ appLink: string;
  number: string;
  projectName: string;
  projectDesc: string;
- projectType: string;
- roles: any[];
+ repoLink: string;
 }

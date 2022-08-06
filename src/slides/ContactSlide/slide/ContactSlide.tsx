@@ -6,15 +6,15 @@ import device from '../../../utils/device';
 
 const ContactTitle = styled.div.attrs<ContactTitleInt>(({ scrollPercent }) => ({
   style: {
-   transform: `translateX(${(scrollPercent) * 5.5}%)`
+   transform: `translateX(${(scrollPercent) * 8}%)`
   },
  }))<ContactTitleInt>`
  transition: transform 0.5s ease-out;
  font-family: 'Roboto', sans-serif;
  position: absolute;
  color: #EEE;
- top: 5%;
- left: -195%;
+ top: 12%;
+ left: -70%;
  @media (max-width: 1023px) {
    display: none;
  }
@@ -47,6 +47,10 @@ export default function ContactSlide(): JSX.Element {
    window.removeEventListener('scroll', handleScroll);
   }
  }, []);
+
+ useEffect(() => {
+  console.log(scrollPercent);
+ }, [scrollPercent])
 
  return (
   <div className='contact-slide-container'>

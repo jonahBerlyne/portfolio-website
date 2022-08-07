@@ -6,7 +6,6 @@ import device from '../../../../utils/device';
 import { OpenInNew } from '@mui/icons-material';
 
 const ProjectName = styled.div`
-  font-family: 'AvenirHeavy';
   @media (max-width: 767px) {
     text-align: center;
   }
@@ -23,7 +22,6 @@ const ProjectName = styled.div`
 
 const ProjectDesc = styled.div`
   padding-top: 2%;
-  font-family: 'AvenirBook';
   width: 40vw;
   @media (max-width: 767px) {
     text-align: center;
@@ -77,6 +75,10 @@ export default function Text(props: TextInt): JSX.Element {
 
  return (
   <div className="text-container">
+
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@500&display=swap');
+   </style>
 
    <ProjectID>
      {number}

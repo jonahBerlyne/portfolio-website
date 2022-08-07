@@ -16,6 +16,8 @@ export interface ImagesInt {
 
 export interface TextInt {
  appLink: string;
+ mobileImgAlt: string;
+ mobileImgSrc: string;
  number: string;
  projectName: string;
  projectDesc: string;

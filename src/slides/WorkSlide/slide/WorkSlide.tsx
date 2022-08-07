@@ -14,49 +14,63 @@ export default function WorkSlide(): JSX.Element {
    projectName: '',
    projectDesc: '',
    appLink: '',
-   repoLink: ''
+   repoLink: '',
+   mobileImgAlt: '',
+   mobileImgSrc: ''
   },
   {
    number: '01',
    projectName: 'Seinfeld Store',
-   projectDesc: 'This is an e-commerce site sample featuring products seen on Seinfeld. Do you want to order a Big Salad for a friend? Or a Tweety Bird Pez Dispenser to bring to a piano recital? Or do you want your very own copy of the Coffee Table Book about Coffee Tables? If so, then the Seinfeld Store is every Seinfeld fan\'s dream shopping site!',
+   projectDesc: 'This is an e-commerce site sample featuring products seen on Seinfeld.',
    appLink: 'https://seinfeld-store-app.web.app',
-   repoLink: 'https://github.com/jonahBerlyne/e-commerce-site'
+   repoLink: 'https://github.com/jonahBerlyne/e-commerce-site',
+   mobileImgAlt: 'Seinfeld Logo',
+   mobileImgSrc: '/images/mobile/seinfeld_logo.png'
   },
   {
    number: '02',
    projectName: 'QR Code App',
    projectDesc: 'An app where you can create your own QR Codes and save them to your own QR Codes list.',
    appLink: 'https://qr-code-app-d7ae4.web.app',
-   repoLink: 'https://github.com/jonahBerlyne/qr-code-app'
+   repoLink: 'https://github.com/jonahBerlyne/qr-code-app',
+   mobileImgAlt: 'QR Code',
+   mobileImgSrc: '/images/mobile/mobile_qr_code.png'
   },
   {
    number: '03',
    projectName: 'Timezone Tracking App',
-   projectDesc: 'A Timezone Tracking App where you can track the times of members of your team, no matter where they are in the world. You can add as many teams and team members as you\'d like! Based on http://timezone.io.',
+   projectDesc: 'A Timezone Tracking App where you can track the times of members of your team, no matter where they are in the world. Based on timezone.io.',
    appLink: 'https://timezone-tracking-app-1c124.web.app',
-   repoLink: 'https://github.com/jonahBerlyne/timezone-tracking-app'
+   repoLink: 'https://github.com/jonahBerlyne/timezone-tracking-app',
+   mobileImgAlt: 'Timezone Logo',
+   mobileImgSrc: '/images/mobile/clock.jpeg'
   },
   {
    number: '04',
    projectName: 'Twitter Clone App',
-   projectDesc: 'This is a clone of Twitter, where you can create your own Twitter account and send tweets from it in real time. You can delete your own tweets if you\'d like, and you can view tweets from other users of the app.',
+   projectDesc: 'This is a clone of Twitter, where you can create your own Twitter account and send tweets from it in real time.',
    appLink: 'https://twitter-clone-app-dc926.web.app',
-   repoLink: 'https://github.com/jonahBerlyne/twitter-clone-app'
+   repoLink: 'https://github.com/jonahBerlyne/twitter-clone-app',
+   mobileImgAlt: 'Twitter Logo',
+   mobileImgSrc: '/images/mobile/twitter_logo.png'
   },
   {
    number: '05',
    projectName: 'Gmail Clone App',
-   projectDesc: 'This is a Gmail Clone App, which you can use through your Gmail account. You can send emails to both yourself and other users of the app and receive them in real time. In addition, you can view all your emails together, read them, and delete them.',
+   projectDesc: 'This is a Gmail Clone App, which you can use through your Gmail account. You can send emails to both yourself and other users of the app and receive them in real time.',
    appLink: 'https://clone-app-8877a.web.app',
-   repoLink: 'https://github.com/jonahBerlyne/gmail-clone-app'
+   repoLink: 'https://github.com/jonahBerlyne/gmail-clone-app',
+   mobileImgAlt: 'Gmail Logo',
+   mobileImgSrc: '/images/mobile/gmail_logo.png'
   },
   {
    number: '',
    projectName: '',
    projectDesc: '',
    appLink: '',
-   repoLink: ''
+   repoLink: '',
+   mobileImgAlt: '',
+   mobileImgSrc: ''
   }
  ];
  
@@ -68,6 +82,8 @@ export default function WorkSlide(): JSX.Element {
   return (
    <Text
     appLink={workDetails[slideNumber].appLink}
+    mobileImgAlt={workDetails[slideNumber].mobileImgAlt}
+    mobileImgSrc={workDetails[slideNumber].mobileImgSrc}
     number={workDetails[slideNumber].number}
     projectName={workDetails[slideNumber].projectName}
     projectDesc={workDetails[slideNumber].projectDesc}

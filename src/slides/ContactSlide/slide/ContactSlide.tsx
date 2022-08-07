@@ -14,18 +14,20 @@ const ContactTitle = styled.div.attrs<ContactTitleInt>(({ scrollPercent }) => ({
  position: absolute;
  color: #EEE;
  top: 12%;
- left: -70%;
  @media (max-width: 1023px) {
    display: none;
  }
  @media ${device.laptop} {
    font-size: 180px;
+   left: -30%;
  }
  @media ${device.laptop_l} {
    font-size: 200px;
+   left: -20%;
  }
  @media ${device.desktop} {
    font-size: 350px;
+   left: 0%;
  }
 `;
 
@@ -35,9 +37,12 @@ export default function ContactSlide(): JSX.Element {
  const handleScroll = (e: any): void => {
   const { body, documentElement } = e.srcElement;
   const sd = Math.max(body.scrollTop, documentElement.scrollTop);
-  const sp = (sd / (documentElement.scrollHeight - documentElement.clientHeight) * 100);
-  const maxLimit = (documentElement.clientHeight * 150) / documentElement.scrollHeight;
-  if (sp >= 0 && sp <= maxLimit) setScrollPercent(sp);
+  let sp = (sd / (documentElement.scrollHeight - documentElement.clientHeight) * 100);
+  const minLimit = (documentElement.clientHeight * 1040) / documentElement.scrollHeight;
+  if (sp >= minLimit && sp <= 100) {
+    sp -= minLimit;
+    setScrollPercent(sp);
+  }
  }
 
  useEffect(() => {
@@ -47,10 +52,6 @@ export default function ContactSlide(): JSX.Element {
    window.removeEventListener('scroll', handleScroll);
   }
  }, []);
-
- useEffect(() => {
-  console.log(scrollPercent);
- }, [scrollPercent])
 
  return (
   <div className='contact-slide-container'>

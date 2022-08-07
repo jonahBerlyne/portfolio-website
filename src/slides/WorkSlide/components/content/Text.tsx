@@ -7,6 +7,9 @@ import { OpenInNew } from '@mui/icons-material';
 
 const ProjectName = styled.div`
   font-family: 'AvenirHeavy';
+  @media (max-width: 767px) {
+    text-align: center;
+  }
   @media ${device.laptop} {
     font-size: 70px;
   }
@@ -22,6 +25,9 @@ const ProjectDesc = styled.div`
   padding-top: 2%;
   font-family: 'AvenirBook';
   width: 40vw;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
   @media ${device.laptop} {
     font-size: 25px;
   }
@@ -61,6 +67,8 @@ const ProjectType = styled.div`
 export default function Text(props: TextInt): JSX.Element {
  const {
   appLink,
+  mobileImgAlt,
+  mobileImgSrc,
   number,
   projectName,
   projectDesc,
@@ -95,6 +103,12 @@ export default function Text(props: TextInt): JSX.Element {
      <ProjectDesc>
        {projectDesc}
      </ProjectDesc>
+
+     {mobileImgSrc !== '' && mobileImgAlt !== '' &&      
+      <div className="mobile-img-container">
+        <img src={mobileImgSrc} alt={mobileImgAlt} />
+      </div>
+     }
 
     </div>
    </div>

@@ -14,6 +14,9 @@ left: -3vw;
 height: 50vh;
 width: 50vw;
 margin-bottom: 50px;
+@media (max-width: 767px) {
+  display: none;
+}
 `;
 
 const ImgTwo = styled.img.attrs<ImagesInt>(({ scrollPercent }) => ({
@@ -28,6 +31,9 @@ position: absolute;
 height: 75vh;
 width: 75vw;
 margin-bottom: 50px;
+@media (max-width: 767px) {
+  display: none;
+}
 `;
 
 export default function Images(props: ImagesInt): JSX.Element {

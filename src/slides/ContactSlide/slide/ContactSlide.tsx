@@ -47,7 +47,6 @@ export default function ContactSlide(): JSX.Element {
 
  useEffect(() => {
   window.addEventListener('scroll', handleScroll);
-  console.log(`${process.env.REACT_APP_EMAIL}`);
 
   return () => {
    window.removeEventListener('scroll', handleScroll);

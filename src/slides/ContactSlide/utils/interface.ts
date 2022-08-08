@@ -5,6 +5,5 @@ export interface ContactTitleInt {
 export interface IconInt {
  alt: string;
  imgUrl: string;
- openMail?: boolean;
- socialLink?: string;
+ socialLink: string;
 }

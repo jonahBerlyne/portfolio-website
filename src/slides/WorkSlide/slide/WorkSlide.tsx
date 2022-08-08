@@ -94,7 +94,6 @@ export default function WorkSlide(): JSX.Element {
    const { body, documentElement } = e.srcElement;
    const scrollDistance = Math.max(body.scrollTop, documentElement.scrollTop);
    const scrollCalc = Math.floor(scrollDistance / vh);
-   console.log(`Scrollcalc: ${scrollCalc}`);
    if (scrollCalc === workDetails.length) {
     setSlideNumber(workDetails.length - 1);
     return;

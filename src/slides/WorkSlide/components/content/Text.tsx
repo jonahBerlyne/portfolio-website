@@ -9,8 +9,11 @@ const ProjectName = styled.div`
   @media (max-width: 767px) {
     text-align: center;
   }
+  @media ${device.tablet} {
+    font-size: 40px;
+  }
   @media ${device.laptop} {
-    font-size: 70px;
+    font-size: 45px;
   }
   @media ${device.laptop_l} {
     font-size: 80px;
@@ -27,7 +30,7 @@ const ProjectDesc = styled.div`
     text-align: center;
   }
   @media ${device.laptop} {
-    font-size: 25px;
+    font-size: 20px;
   }
   @media ${device.laptop_l} {
     font-size: 30px;
@@ -35,21 +38,6 @@ const ProjectDesc = styled.div`
 `;
 
 const ProjectID = styled.div`
-  font-family: 'AvenirHeavy';
-  @media ${device.laptop} {
-    font-size: 25px;
-  }
-  @media ${device.laptop_l} {
-    font-size: 30px;
-  }
-  @media ${device.desktop} {
-    font-size: 58px;
-  }
-  padding: 5%;
-`;
-
-const ProjectType = styled.div`
-  font-family: 'AvenirHeavy';
   @media ${device.laptop} {
     font-size: 25px;
   }
@@ -90,6 +78,16 @@ export default function Text(props: TextInt): JSX.Element {
      <ProjectName>
        {projectName}
      </ProjectName>
+     
+     {mobileImgSrc !== '' && mobileImgAlt !== '' &&      
+       <div className="mobile-img-container">
+         <img src={mobileImgSrc} alt={mobileImgAlt} />
+       </div>
+     }
+
+     <ProjectDesc>
+       {projectDesc}
+     </ProjectDesc>
 
      {appLink !== '' && repoLink !== '' && 
       <div className='project-links-container'>
@@ -99,16 +97,6 @@ export default function Text(props: TextInt): JSX.Element {
        <a href={repoLink} target="_blank" rel="noreferrer">
          <img className='repo-link' src="/images/logos/github_logo.png" alt={`Repo link for ${projectName}`} />
        </a>
-      </div>
-     }
-
-     <ProjectDesc>
-       {projectDesc}
-     </ProjectDesc>
-
-     {mobileImgSrc !== '' && mobileImgAlt !== '' &&      
-      <div className="mobile-img-container">
-        <img src={mobileImgSrc} alt={mobileImgAlt} />
       </div>
      }
 

@@ -6,7 +6,6 @@ import Image from '../components/content/Image';
 export default function WorkSlide(): JSX.Element {
  const [vh, setVh] = useState<number>(0);
  const [slideNumber, setSlideNumber] = useState<number>(0);
- const [lastScrollTop, setLastScrollTop] = useState<number>(0);
 
  const workDetails = [
   {
@@ -77,8 +76,6 @@ export default function WorkSlide(): JSX.Element {
  const pageSplitTimes = 1.4;
  
  const changeTextContentBasedOnScroll = (): JSX.Element => {
-  if (workDetails[slideNumber].appLink === undefined) window.location.reload();
-  
   return (
    <Text
     appLink={workDetails[slideNumber].appLink}
@@ -96,7 +93,16 @@ export default function WorkSlide(): JSX.Element {
   const handleScroll = (e: any): void => {
    const { body, documentElement } = e.srcElement;
    const scrollDistance = Math.max(body.scrollTop, documentElement.scrollTop);
-   setLastScrollTop(scrollDistance);
+   const scrollCalc = Math.floor(scrollDistance / vh);
+   console.log(`Scrollcalc: ${scrollCalc}`);
+   if (scrollCalc === workDetails.length) {
+    setSlideNumber(workDetails.length - 1);
+    return;
+   }
+   if (scrollCalc === Infinity) {
+    setSlideNumber(0);
+    return;
+   }
    if (Math.floor(scrollDistance / vh) !== slideNumber
    && slideNumber < workDetails.length - 1) {
     setSlideNumber(Math.floor(scrollDistance / vh));
@@ -112,11 +118,17 @@ export default function WorkSlide(): JSX.Element {
   return () => {
    window.removeEventListener('scroll', handleScroll);
   }
- }, [lastScrollTop, slideNumber, vh, workDetails.length]);
+ }, [slideNumber, vh, workDetails.length]);
+
+ useEffect(() => {
+  if (slideNumber === workDetails.length) {
+   setSlideNumber(workDetails.length - 1);
+  }
+ }, [slideNumber, workDetails.length]);
 
  return (
   <div className='work-slide-container'>
-   {changeTextContentBasedOnScroll()}
+   {slideNumber < workDetails.length && changeTextContentBasedOnScroll()}
    <Image pageSplitTimes={pageSplitTimes} />
   </div>
  );

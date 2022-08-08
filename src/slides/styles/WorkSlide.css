@@ -60,6 +60,14 @@
  display: none;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+ .project-links-container > a > .MuiSvgIcon-root,
+ .project-links-container > a > img {
+  height: 50px;
+  width: 50px;
+ }
+}
+
 @media (max-width: 767px) {
  .work-slide-container {
   flex-direction: column;
@@ -81,6 +89,7 @@
  .project-links-container {
   gap: 15px;
   justify-content: center;
+  margin-top: 5px;
  }
 
  .project-links-container > a > .MuiSvgIcon-root,
@@ -94,8 +103,8 @@
  }
 
  .mobile-img-container > img {
-  height: 120px;
-  width: 120px;
+  height: 80px;
+  width: 80px;
   margin-top: 20px;
  }
 }

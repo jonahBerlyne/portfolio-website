@@ -47,6 +47,7 @@ export default function ContactSlide(): JSX.Element {
 
  useEffect(() => {
   window.addEventListener('scroll', handleScroll);
+  console.log(`${process.env.REACT_APP_EMAIL}`);
 
   return () => {
    window.removeEventListener('scroll', handleScroll);
@@ -60,6 +61,11 @@ export default function ContactSlide(): JSX.Element {
    </style>
    <ContactTitle scrollPercent={scrollPercent}>CONTACT</ContactTitle>
    <div className="icons-container">
+    <Icon 
+     alt="Email"
+     imgUrl='/images/logos/email_logo.png' 
+     socialLink={`${process.env.REACT_APP_EMAIL}`}
+    />
     <Icon 
      alt="Github"
      imgUrl='/images/logos/github_logo.png' 

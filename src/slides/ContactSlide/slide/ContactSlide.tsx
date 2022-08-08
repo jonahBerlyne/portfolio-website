@@ -63,7 +63,7 @@ export default function ContactSlide(): JSX.Element {
     <Icon 
      alt="Email"
      imgUrl='/images/logos/email_logo.png' 
-     openMail={true}
+     socialLink="mailto:jonahberlyne@gmail.com"
     />
     <Icon 
      alt="Github"

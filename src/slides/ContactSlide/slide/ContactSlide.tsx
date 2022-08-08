@@ -63,7 +63,7 @@ export default function ContactSlide(): JSX.Element {
     <Icon 
      alt="Email"
      imgUrl='/images/logos/email_logo.png' 
-     socialLink={`${process.env.REACT_APP_EMAIL}`}
+     openMail={true}
     />
     <Icon 
      alt="Github"

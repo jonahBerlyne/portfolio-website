@@ -2,10 +2,8 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 
-type Props = {}
-
-export default function Hero({}: Props) {
-  const [text, count] = useTypewriter({
+export default function Hero() {
+  const [text] = useTypewriter({
    words: [
     'Jonah Berlyne',
     'Web Developer'
@@ -19,11 +17,11 @@ export default function Hero({}: Props) {
      <BackgroundCircles />
      <img 
       src='/images/personal/profilePicture.jpeg'
-      alt="Jonah Berlyne's Profile Picture"
+      alt="Jonah Berlyne's Profile Pic"
       className='relative rounded-full h-32 w-32 mx-auto object-cover'
      />
      <div className='z-20'>
-      <h2 className='text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px] mt-3 px-2 sm:px-0'>Web Developer</h2>
+      <h2 className='text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px] mt-3 px-2 sm:px-0'>Welcome</h2>
       <h1 className='text-3xl sm:text-5xl lg:text-6xl font-semibold'>
        <span className='mr-3'>{text}</span>
        <Cursor 

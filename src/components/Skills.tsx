@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import Skill from './Skill';
 import skillsData from '../data/SkillsData';
 
-type Props = {}
-
-export default function Skills({}: Props) {
+export default function Skills() {
   return (
     <motion.div
       initial={{
@@ -21,7 +19,7 @@ export default function Skills({}: Props) {
      >
      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Skills</h3>
      <div className='flex flex-col gap-y-8 md:pt-12'>
-      <div className='grid grid-cols-4 gap-y-4 gap-x-1'>
+      <div className='grid grid-cols-4 gap-y-4 gap-x-1 mt-4'>
         {skillsData.slice(0, skillsData.length / 2).map((skill, index) => {
           return (
             <div key={index}>

@@ -28,7 +28,7 @@ export default function Header() {
        bgColor='transparent'
       />
       <SocialIcon 
-       url='http://www.linkedin.com/jonahBerlyne'
+       url='https://www.linkedin.com/in/jonah-b-b7015a100/'
        fgColor='gray'
        bgColor='transparent'
       />

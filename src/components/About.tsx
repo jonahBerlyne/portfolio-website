@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-type Props = {}
-
-export default function About({}: Props) {
+export default function About() {
   return (
     <motion.div
      initial={{
@@ -21,7 +19,7 @@ export default function About({}: Props) {
      <div className='space-y-10 pr-3 md:px-10 mt-32 sm:mt-0 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-secondary/80'>
       <h4 className='text-4xl font-semibold'>A bit about <span className='underline decoration-secondary/50'>me</span>...</h4>
 
-      <p className='text-base pb-20 sm:pb-0'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore saepe consequuntur ipsam laudantium perspiciatis atque iusto quae, quos, dolor quasi nisi delectus voluptas! Pariatur alias illo reprehenderit facilis, accusamus libero et molestiae asperiores ratione, dicta vitae autem debitis quia optio, est labore ea qui quo! Nam, laboriosam qui, optio quos perferendis sunt voluptatum quas laudantium expedita doloremque laborum illo, quae excepturi eum aut? Autem illum optio aliquam ex, placeat reprehenderit velit molestias dolore esse. Maiores repellat blanditiis doloremque nisi dolores ducimus fugiat in, cupiditate deserunt eligendi qui possimus veritatis doloribus consectetur impedit molestiae beatae, autem mollitia. Unde voluptate id a!</p>
+      <p className='text-base pb-20 sm:pb-0'></p>
      </div>
     </motion.div>
   )

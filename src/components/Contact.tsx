@@ -11,9 +11,15 @@ type Inputs = {
 
 export default function Contact() {
 
-  const { register, handleSubmit } = useForm<Inputs>();
+  const { register, handleSubmit, reset } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = formData => {
-   window.location.href = `mailto:${process.env.REACT_APP_EMAIL}?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} ${formData.email}`
+   window.location.href = `mailto:${process.env.REACT_APP_EMAIL}?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} ${formData.email}`;
+   reset({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+   });
   };
 
   return (
@@ -46,6 +52,7 @@ export default function Contact() {
          name="name" 
          id="name"
          placeholder='Name' 
+         required
         />
         <input
          {...register('email')} 
@@ -54,6 +61,7 @@ export default function Contact() {
          name="email" 
          id="email"
          placeholder='Email' 
+         required
         />
        </div>
        <input
@@ -63,13 +71,15 @@ export default function Contact() {
         name="subject" 
         id="subject"
         placeholder='Subject' 
+        required
        />
        <textarea
         {...register('message')} 
         className='contactInput resize-none pb-2 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-secondary/80'
         name='message'
         id='message'
-        placeholder='Message' 
+        placeholder='Message'
+        required 
        />
        <button 
         type="submit"
@@ -80,5 +90,5 @@ export default function Contact() {
       </form>
      </div>
     </div>
-  )
+  );
 }

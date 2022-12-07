@@ -65,6 +65,8 @@ export default function Projects() {
                 fgColor='gray'
                 bgColor='transparent'
                 style={{ height: 60, width: 60 }}
+                target='_blank'
+                rel='noreferrer'
               />
             </div>
           </div>

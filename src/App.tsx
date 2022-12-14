@@ -1,10 +1,10 @@
-import { HomeIcon } from '@heroicons/react/24/solid';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -32,15 +32,7 @@ export default function App() {
       </section>
 
       <>      
-        <footer className='sticky bottom-5 w-full hidden sm:inline'>
-            <div className='flex items-center justify-center'>
-              <a href="#hero">
-                <HomeIcon 
-                 className='h-10 w-10 cursor-pointer'
-                />
-              </a>
-            </div>
-        </footer>    
+       <Footer />  
       </>
     </div>
   )

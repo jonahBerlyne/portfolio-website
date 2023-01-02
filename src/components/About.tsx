@@ -19,7 +19,7 @@ export default function About() {
      <div className='space-y-10 pr-3 md:px-10 mt-32 sm:mt-0 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-secondary/80'>
       <h4 className='text-4xl font-semibold'>A bit about <span className='underline decoration-secondary/50'>me</span>...</h4>
 
-      <p className='text-base pb-20 sm:pb-0'>I'm an enthusiastic, self-taught web developer. Through the Odin Project, I've taught myself relevant front-end web development skills. I'm team-oriented, motivated to challenge myself, and am a passionate learner. I've recently completed my first team project as part of Chingu's online, global collaboration platform and I'm looking forward to participating in their next one. Dual citizen of both the UK and the US.</p>
+      <p className='text-base pb-20 sm:pb-0'>Self-taught full-stack web developer with a strong foundation in HTML, CSS, JavaScript, and React. Proficient in creating responsive and user-friendly websites from start to finish, including design, development, and deployment. Passionate about learning new technology and am able to adapt quickly in a fast-paced, dynamic team environment.</p>
      </div>
     </motion.div>
   )

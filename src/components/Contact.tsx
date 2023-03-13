@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -30,12 +30,6 @@ export default function Contact() {
       <br />
       <span className='decoration-secondary/50 underline'>Let's talk</span></h4>
       <div className='space-y-5 sm:space-y-10'>
-       <div className='flex items-center space-x-5 justify-center'>
-        <PhoneIcon 
-         className='text-secondary h-7 w-7 animate-pulse'
-        />
-        <p className='text-xl sm:text-2xl'>{process.env.REACT_APP_PHONE_NUMBER}</p>
-       </div>
        <div className='flex items-center space-x-5 justify-center'>
         <EnvelopeIcon 
          className='text-secondary h-7 w-7 animate-pulse'
